@@ -1,0 +1,419 @@
+{
+	"info": {
+		"_postman_id": "d818a28e-fecd-4a76-b206-543fa908d753",
+		"name": "Continuada1-atleta-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "JogadorBasquete",
+			"item": [
+				{
+					"name": "Listar jogadores cadastrados",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/jogador/basquete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jogador",
+								"basquete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar jogador de Basquete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"idJogador\": 1,\r\n        \"nome\": \"James Harden\",\r\n        \"idade\": 30,\r\n        \"posicao\": \"SG\",\r\n        \"salario\": 80000.0,\r\n        \"pontosPorJogo\": 34.3\r\n    },\r\n    {\r\n        \"idJogador\": 2,\r\n        \"nome\": \"Lebron James\",\r\n        \"idade\": 35,\r\n        \"posicao\": \"PG\",\r\n        \"salario\": 100000.0,\r\n        \"pontosPorJogo\": 25.3\r\n    },\r\n    {\r\n        \"idJogador\": 3,\r\n        \"nome\": \"Jayson Tatum\",\r\n        \"idade\": 21,\r\n        \"posicao\": \"PF\",\r\n        \"salario\": 8000.0,\r\n        \"pontosPorJogo\": 15.9\r\n    },\r\n    {\r\n        \"idJogador\": 4,\r\n        \"nome\": \"Marcus Morris\",\r\n        \"idade\": 30,\r\n        \"posicao\": \"SF\",\r\n        \"salario\": 800.0,\r\n        \"pontosPorJogo\": 16.7\r\n    },\r\n    {\r\n        \"idJogador\": 5,\r\n        \"nome\": \"Kevin Potter Jr\",\r\n        \"idade\": 19,\r\n        \"posicao\": \"SF\",\r\n        \"salario\": 350.0,\r\n        \"pontosPorJogo\": 15.9\r\n    },\r\n    {\r\n        \"idJogador\": 6,\r\n        \"nome\": \"Matthew Dellavedova\",\r\n        \"idade\": 29,\r\n        \"posicao\": \"PG\",\r\n        \"salario\": 100.0,\r\n        \"pontosPorJogo\": 3.1\r\n    },\r\n    {\r\n        \"idJogador\": 7,\r\n        \"nome\": \"Trae Young\",\r\n        \"idade\": 21,\r\n        \"posicao\": \"PG\",\r\n        \"salario\": 8000.0,\r\n        \"pontosPorJogo\": 29.6\r\n    },\r\n    {\r\n        \"idJogador\": 8,\r\n        \"nome\": \"Giannis Antetokonmpo\",\r\n        \"idade\": 25,\r\n        \"posicao\": \"PF\",\r\n        \"salario\": 10000.0,\r\n        \"pontosPorJogo\": 29.5\r\n    },\r\n    {\r\n        \"idJogador\": 9,\r\n        \"nome\": \"Harrison Barnes\",\r\n        \"idade\": 27,\r\n        \"posicao\": \"PF\",\r\n        \"salario\": 3000.0,\r\n        \"pontosPorJogo\": 20.3\r\n    },\r\n    {\r\n        \"idJogador\": 10,\r\n        \"nome\": \"Tyler Hero\",\r\n        \"idade\": 20,\r\n        \"posicao\": \"SG\",\r\n        \"salario\": 7500.0,\r\n        \"pontosPorJogo\": 50.0\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/jogador/basquete/cadastrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jogador",
+								"basquete",
+								"cadastrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar jogador de basquete",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idJogador\": 6,\r\n    \"nome\": \"Matthew Dellavedova\",\r\n    \"idade\": 29,\r\n    \"posicao\": \"PG\",\r\n    \"salario\": 1000.0,\r\n    \"pontosPorJogo\": 3.1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/jogador/basquete/atualizar/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jogador",
+								"basquete",
+								"atualizar",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar jogador de basquete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/jogador/basquete/deletar/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jogador",
+								"basquete",
+								"deletar",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "JogadorFutebol",
+			"item": [
+				{
+					"name": "Listar jogadores cadastrados",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/jogador/futebol",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jogador",
+								"futebol"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar jogador",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"idJogador\": 1,\r\n        \"nome\": \"Paolo Guerreiro\",\r\n        \"idade\": 30,\r\n        \"posicao\": \"AT\",\r\n        \"salario\": 900.0,\r\n        \"pontosPorJogo\": 3\r\n    },\r\n    {\r\n        \"idJogador\": 2,\r\n        \"nome\": \"Marinho\",\r\n        \"idade\": 27,\r\n        \"posicao\": \"AT\",\r\n        \"salario\": 200.0,\r\n        \"pontosPorJogo\": 1\r\n    },\r\n    {\r\n        \"idJogador\": 3,\r\n        \"nome\": \"Neymar Jr\",\r\n        \"idade\": 26,\r\n        \"posicao\": \"AT\",\r\n        \"salario\": 15000.0,\r\n        \"pontosPorJogo\": 2\r\n    },\r\n    {\r\n        \"idJogador\": 4,\r\n        \"nome\": \"Diego Souza\",\r\n        \"idade\": 22,\r\n        \"posicao\": \"AT\",\r\n        \"salario\": 80.0,\r\n        \"pontosPorJogo\": 0\r\n    },\r\n    {\r\n        \"idJogador\": 5,\r\n        \"nome\": \"Alisson\",\r\n        \"idade\": 22,\r\n        \"posicao\": \"MEIA\",\r\n        \"salario\": 80.0,\r\n        \"pontosPorJogo\": 2\r\n    },\r\n    {\r\n        \"idJogador\": 6,\r\n        \"nome\": \"Jean Pierre\",\r\n        \"idade\": 32,\r\n        \"posicao\": \"AT\",\r\n        \"salario\": 30.0,\r\n        \"pontosPorJogo\": 1\r\n    },\r\n    {\r\n        \"idJogador\": 7,\r\n        \"nome\": \"João Lucas\",\r\n        \"idade\": 23,\r\n        \"posicao\": \"GOL\",\r\n        \"salario\": 3000.0,\r\n        \"pontosPorJogo\": 1\r\n    },\r\n    {\r\n        \"idJogador\": 8,\r\n        \"nome\": \"Martin Benitez\",\r\n        \"idade\": 40,\r\n        \"posicao\": \"DEF\",\r\n        \"salario\": 20.0,\r\n        \"pontosPorJogo\": 1\r\n    },\r\n    {\r\n        \"idJogador\": 9,\r\n        \"nome\": \"Patrick\",\r\n        \"idade\": 19,\r\n        \"posicao\": \"MEIA\",\r\n        \"salario\": 750.0,\r\n        \"pontosPorJogo\": 3\r\n    },\r\n    {\r\n        \"idJogador\": 10,\r\n        \"nome\": \"Pepê\",\r\n        \"idade\": 22,\r\n        \"posicao\": \"AT\",\r\n        \"salario\": 910.0,\r\n        \"pontosPorJogo\": 2\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/jogador/futebol/cadastrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jogador",
+								"futebol",
+								"cadastrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar jogador de futebol",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idJogador\": 8,\r\n    \"nome\": \"Martin Benitez\",\r\n    \"idade\": 40,\r\n    \"posicao\": \"MEIA\",\r\n    \"salario\": 20.0,\r\n    \"pontosPorJogo\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/jogador/futebol/atualizar/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jogador",
+								"futebol",
+								"atualizar",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar jogador de futebol",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/jogador/futebol/deletar/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jogador",
+								"futebol",
+								"deletar",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Time",
+			"item": [
+				{
+					"name": "Listar times cadastrados",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/time",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"time"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar time novo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"idTime\": 1,\r\n        \"nomeTime\": \"Houston Rockets\",\r\n        \"conferencia\": \"Southwest\",\r\n        \"anoFundacao\": 1967,\r\n        \"dinheiroCaixa\": 100.0,\r\n        \"listaDeJogadores\": []\r\n    },\r\n    {\r\n        \"idTime\": 2,\r\n        \"nomeTime\": \"Toronto Raptors\",\r\n        \"conferencia\": \"Eastern\",\r\n        \"anoFundacao\": 1995,\r\n        \"dinheiroCaixa\": 80000.0,\r\n        \"listaDeJogadores\": []\r\n    },\r\n    {\r\n        \"idTime\": 3,\r\n        \"nomeTime\": \"Corinthians\",\r\n        \"conferencia\": \"SP\",\r\n        \"anoFundacao\": 1910,\r\n        \"dinheiroCaixa\": -1000.0,\r\n        \"listaDeJogadores\": []\r\n    },\r\n    {\r\n        \"idTime\": 4,\r\n        \"nomeTime\": \"SE Crefisa Palmeiras\",\r\n        \"conferencia\": \"SP\",\r\n        \"anoFundacao\": 1914,\r\n        \"dinheiroCaixa\": 999999.0,\r\n        \"listaDeJogadores\": []\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/time/cadastrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"time",
+								"cadastrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar jogador de Basquete ao time",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idJogador\": 1,\r\n    \"nome\": \"James Harden\",\r\n    \"idade\": 30,\r\n    \"posicao\": \"SG\",\r\n    \"salario\": 8.0,\r\n    \"pontosPorJogo\": 34.3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/time/cadastrar/jogador/basquete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"time",
+								"cadastrar",
+								"jogador",
+								"basquete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar jogador de Futebol ao time",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idJogador\": 1,\r\n    \"nome\": \"Paolo Guerreiro\",\r\n    \"idade\": 30,\r\n    \"posicao\": \"AT\",\r\n    \"salario\": 900.0,\r\n    \"pontosPorJogo\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/time/cadastrar/jogador/futebol/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"time",
+								"cadastrar",
+								"jogador",
+								"futebol",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar time",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idTime\": 1,\r\n    \"nomeTime\": \"Houston Rockets Texas\",\r\n    \"conferencia\": \"Southwest\",\r\n    \"anoFundacao\": 2020,\r\n    \"dinheiroCaixa\": 100.0,\r\n    \"listaDeJogadores\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/time/atualizar/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"time",
+								"atualizar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Time",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/time/deletar/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"time",
+								"deletar",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "d8286b72-1f7e-46dd-9e61-b17e78a19cfa",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "09aad5ad-a660-4a2d-96d7-dff08f26600d",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

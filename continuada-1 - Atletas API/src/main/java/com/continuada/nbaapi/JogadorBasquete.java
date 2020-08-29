@@ -57,7 +57,7 @@ public class JogadorBasquete extends Atleta {
             return getSalario() * 0.9;
         }else if(this.pontosPorJogo < 20.0){
             return getSalario() * 1.0;
-        }else if(this.pontosPorJogo > 20.0){
+        }else if(this.pontosPorJogo < 80.0){
             return getSalario() * 3.0;
         }else{
             return getSalario() * 1.0;

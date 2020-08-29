@@ -2,6 +2,7 @@ package com.continuada.nbaapi.Controller;
 
 import com.continuada.nbaapi.Atleta;
 import com.continuada.nbaapi.JogadorBasquete;
+import com.continuada.nbaapi.JogadorFutebol;
 import com.continuada.nbaapi.Time;
 import org.springframework.web.bind.annotation.*;
 
@@ -45,13 +46,32 @@ public class TimeController {
         return "Time foi removido";
     }
 
-    // Cadastrar jogador ao time
+    // Cadastrar jogador ao time, sendo cadatrado com sucesso o valor é subtraido do dinheiro em caixa do time
     @PostMapping("/cadastrar/jogador/basquete/{id}")
-    public String cadastrarJogadorAoTime(@RequestBody JogadorBasquete jogadorBasquete, @PathVariable int id){
-        if (!listaTime.isEmpty()){
+    public String cadastrarJogadorBasquete(@RequestBody JogadorBasquete jogadorBasquete, @PathVariable int id){
+        Double salario = jogadorBasquete.getSalario();
+
+        if (!listaTime.isEmpty() && listaTime.get(id - 1).getDinheiroCaixa() > salario){
             listaTime.get(id - 1).getListaAtleta().add(id - 1 , jogadorBasquete);
+            listaTime.get(id - 1).setDinheiroCaixa(listaTime.get(id - 1).getDinheiroCaixa() - salario);
             return "Jogador cadastrado com sucesso";
+        }else if(listaTime.get(id - 1).getDinheiroCaixa() < salario){
+            return "Saldo em caixa insuficiente";
         }
-        return "Time não cadastrado";
+        return "Time não encontrado";
+    }
+    // Cadastrar jogador ao time, sendo cadatrado com sucesso o valor é subtraido do dinheiro em caixa do time
+    @PostMapping("/cadastrar/jogador/futebol/{id}")
+    public String cadastrarJogadorFutebol(@RequestBody JogadorFutebol jogadorFutebol, @PathVariable int id){
+        Double salario = jogadorFutebol.getSalario();
+
+        if (!listaTime.isEmpty() && listaTime.get(id - 1).getDinheiroCaixa() > salario){
+            listaTime.get(id - 1).getListaAtleta().add(id - 1 , jogadorFutebol);
+            listaTime.get(id - 1).setDinheiroCaixa(listaTime.get(id - 1).getDinheiroCaixa() - salario);
+            return "Jogador cadastrado com sucesso";
+        }else if(listaTime.get(id - 1).getDinheiroCaixa() < salario){
+            return "Saldo em caixa insuficiente";
+        }
+        return "Time não encontrado";
     }
 }
